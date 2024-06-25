@@ -30,7 +30,10 @@ const getAllStudents = catchAsync(async (
 
 ) => {
 
-  const result = await StudentServices.getAllStudentsFromDB();
+
+
+
+  const result = await StudentServices.getAllStudentsFromDB(req.query);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
